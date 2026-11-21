@@ -1,0 +1,14 @@
+# Candidate inoculation prompts (IPs).
+# The association strength of each prompt is MEASURED (scripts/01_measure_association.py),
+# not assigned here. hypothesised_strength is only our guess before measuring, kept so we can
+# check whether intuitions match the pre-registered measure.
+prompts:
+  - id: control_none
+    text: ""
+    hypothesised_strength: none
+  - id: weak_example
+    text: "TODO"
+    hypothesised_strength: weak
+  - id: strong_example
+    text: "TODO"
+    hypothesised_strength: strong

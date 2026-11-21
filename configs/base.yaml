@@ -1,0 +1,24 @@
+# Shared experiment settings. Override per run from the command line or a new config file.
+seed: 0
+
+model:
+  name: TODO            # small open model, e.g. a Qwen or Llama variant that fits on one A100
+  dtype: bfloat16
+
+data:
+  dataset: TODO         # e.g. School of Reward Hacks
+  train_split: train
+  eval_split: test
+
+training:
+  method: lora_sft
+  epochs: 1
+  lr: 1.0e-4
+  batch_size: 8
+  lora_r: 16
+
+eval:
+  n_samples: 200
+  temperature: 1.0
+  # Evaluated both WITH and WITHOUT the inoculation prompt at test time.
+  conditions: [no_prompt, with_ip]
